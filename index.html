@@ -5,7 +5,15 @@
     https://www.youtube.com/watch?v=XdcZ33vLdh0
     https://www.youtube.com/watch?v=o1DDWQDBT9Y
     https://cdnjs.com/libraries/codemirror
+    function editor(id)
+    {
 
+      CodeMirror.fromTextArea(id, {
+        mode: "forth",
+        theme: "colorforth" ,
+        lineNumbers : true
+      })
+    }
     -->
 
     <!-- Required meta tags -->
@@ -42,8 +50,17 @@
         <div class="col-lg-12">
           <form  action="">
             <div class="form-group">
-              <label for="">Editeur</label>
-              <textarea name="" id="editeur" rows="10" class="form-control"></textarea>
+              <label><strong>Editeur<br></br></strong></label>
+              <label>NodeUp</label>
+              <textarea name="" id="nodeUp" rows="10" class="form-control"></textarea
+              <label for="">NodeMiddle</label>
+              <textarea name="" id="nodeMiddle" rows="10" class="form-control"></textarea>
+              <label>NodeDown</label>
+              <textarea name="" id="nodeDown" rows="10" class="form-control"></textarea>
+              <label>NodeRight</label>
+              <textarea name="" id="nodeRight" rows="10" class="form-control"></textarea>
+              <label>NodeLeft</label>
+              <textarea name="" id="nodeLeft" rows="10" class="form-control"></textarea>
             </div>
             <button type="button" class="btn btn-info">Go</button>
 
@@ -58,18 +75,23 @@
 
 
     <script>
-    $(document).ready(function() {
-        var editeur = CodeMirror.fromTextArea
-        (document.getElementById('editeur'), {
+      function editor (id)
+      {
+        CodeMirror.fromTextArea
+        (document.getElementById(id), {
           mode: "forth",
           theme: "colorforth" ,
           lineNumbers : true
+        });
+      }
 
-
-        })
-
-
-    });
+      $(document).ready(function() {
+      editor ("nodeUp") ;
+      editor ("nodeMiddle") ;
+      editor ("nodeDown") ;
+      editor ("nodeRight") ;
+      editor ("nodeLeft") ;
+      });
     </script>
 
   </body>
