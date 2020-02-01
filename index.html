@@ -5,15 +5,7 @@
     https://www.youtube.com/watch?v=XdcZ33vLdh0
     https://www.youtube.com/watch?v=o1DDWQDBT9Y
     https://cdnjs.com/libraries/codemirror
-    function editor(id)
-    {
 
-      CodeMirror.fromTextArea(id, {
-        mode: "forth",
-        theme: "colorforth" ,
-        lineNumbers : true
-      })
-    }
     -->
 
     <!-- Required meta tags -->
@@ -40,6 +32,8 @@
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/codemirror/5.51.0/mode/forth/forth.js"></script>
 
     <script src="https://cdn.jsdelivr.net/npm/summernote@0.8.15/dist/summernote.min.js"></script>
+
+    <link rel="stylesheet" href="css/style.css"/>
     <title>Ga144 Web!</title>
 
   </head>
@@ -52,7 +46,31 @@
             <div class="form-group">
               <label><strong>Editeur<br></br></strong></label>
               <label>NodeUp</label>
-              <textarea name="" id="nodeUp" rows="10" class="form-control"></textarea
+              <textarea name="" id="nodeUp" rows="10" class="form-control">
+                \ Insertion sort
+
+                : cell-  1 cells - ;
+
+                : insert ( start end -- start )
+                  dup @ >r ( r: v )
+                  begin
+                    2dup <
+                  while
+                    r@ over cell- @ <
+                  while
+                    cell-
+                    dup @ over cell+ !
+                  repeat then
+                  r> swap ! ;
+
+                : sort ( array len -- )
+                  1 ?do
+                    dup i cells + insert
+                  loop drop ;
+
+
+
+                </textarea
               <label for="">NodeMiddle</label>
               <textarea name="" id="nodeMiddle" rows="10" class="form-control"></textarea>
               <label>NodeDown</label>
@@ -80,8 +98,13 @@
         CodeMirror.fromTextArea
         (document.getElementById(id), {
           mode: "forth",
-          theme: "colorforth" ,
-          lineNumbers : true
+          theme: "colorforth",
+          lineNumbers : true,
+          lineWrapping: true,
+          indentUnit: 1,
+          tabSize: 2,
+          autofocus: true,
+          showCursorWhenSelecting : true
         });
       }
 
