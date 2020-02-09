@@ -39,57 +39,42 @@
   </head>
   <body>
     <h1>Ga144 world!</h1>
-    <div class="row">
+      <label><strong>Editeur<br></br></strong></label>
       <div class="container">
-        <div class="col-lg-12">
-          <form  action="">
-            <div class="form-group">
-              <label><strong>Editeur<br></br></strong></label>
+        <form>
+        <div class="row mb-3">
+            <div class="col">
+
               <label>NodeUp</label>
-              <textarea name="" id="nodeUp" rows="10" class="form-control">
+              <textarea name="" id="nodeUp" rows="10" class="col-lg-3">
                 \ Insertion sort
 
                 : cell-  1 cells - ;
 
-                : insert ( start end -- start )
-                  dup @ >r ( r: v )
-                  begin
-                    2dup <
-                  while
-                    r@ over cell- @ <
-                  while
-                    cell-
-                    dup @ over cell+ !
-                  repeat then
-                  r> swap ! ;
-
-                : sort ( array len -- )
-                  1 ?do
-                    dup i cells + insert
-                  loop drop ;
-
-
-
-                </textarea
-              <label for="">NodeMiddle</label>
-              <textarea name="" id="nodeMiddle" rows="10" class="form-control"></textarea>
-              <label>NodeDown</label>
-              <textarea name="" id="nodeDown" rows="10" class="form-control"></textarea>
-              <label>NodeRight</label>
-              <textarea name="" id="nodeRight" rows="10" class="form-control"></textarea>
-              <label>NodeLeft</label>
-              <textarea name="" id="nodeLeft" rows="10" class="form-control"></textarea>
+                </textarea>
             </div>
-            <button type="button" class="btn btn-info">Go</button>
-
-          </form>
-
         </div>
-
-      </div>
-
+        <div class="form-row">
+            <div class="col">
+              <label>NodeLeft</label>
+              <textarea name="" id="nodeLeft" rows="10" class="col-lg-3"></textarea>
+            </div>
+            <div class="col">
+              <label for="">NodeMiddle</label>
+              <textarea name="" id="nodeMiddle" rows="10" class="col-lg-3"></textarea>
+            </div>
+            <div class="col">
+              <label>NodeRight</label>
+              <textarea name="" id="nodeRight" rows="10" class="col-lg-3"></textarea>
+            </div>
+        </div>
+        <div class="col">
+          <label>NodeDown</label>
+          <textarea name="" id="nodeDown" rows="10" class="col-lg-3"></textarea>
+        </div>
+      </form>
     </div>
-
+      <button type="button" class="btn btn-info">Go</button>
 
 
     <script>
@@ -101,8 +86,7 @@
           theme: "colorforth",
           lineNumbers : true,
           lineWrapping: true,
-          indentUnit: 1,
-          tabSize: 2,
+
           autofocus: true,
           showCursorWhenSelecting : true
         });
