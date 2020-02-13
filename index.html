@@ -5,7 +5,6 @@
     https://www.youtube.com/watch?v=XdcZ33vLdh0
     https://www.youtube.com/watch?v=o1DDWQDBT9Y
     https://cdnjs.com/libraries/codemirror
-
     -->
 
     <!-- Required meta tags -->
@@ -38,18 +37,61 @@
 
   </head>
   <body>
-    <h1>Ga144 world!</h1>
-      <label><strong>Editeur<br></br></strong></label>
-      <div class="container">
+  <div class="container-fluid">
+  <img class="bg-img" src="images/Ga144_small.jpg">
+
+
+  </div>
+    <!-- <img src="images/Ga144_small.jpg" class="rounded" alt="Ga144 cpu"> -->
+    <div class="jumbotron text-center">
+      <h1>Ga144 world!</h1>
+      <p><kbd> Editeur </kbd></p>
+      <div class="container-fluid">
         <form>
+          <div class="form-group row">
+            <div class="col-xs-2">
+              <label for="Fileinput"><strong>Name File input</strong></label>
+              <input class="form-control" id="Fileinput" type="text">
+            </div>
+          </div>
+        </form>
+      </div>
+   </div>
+
+    <div class="container-fluid">
+      <div class="btn-group">
+      <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">   Menu   </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item" href="#">LOAD</a>
+          <a class="dropdown-item" href="#">SAVE</a>
+
+        </div>
+      </div>
+      <div class="dropdown">
+        <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownNodeButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">   Node   </button>
+        <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+          <a class="dropdown-item" href="#">SELECT</a>
+          <a class="dropdown-item" href="#">LIST</a>
+          <a class="dropdown-item" href="#">REFRESH</a>
+        </div>
+      </div>
+      <button type="button" class="btn btn-success">   Compile   </button>
+      <button type="button" class="btn btn-info">  Send to GA144  </button>
+
+      </div>
+      </div>
+
+
+      <div class="container-fluid">
+
         <div class="row mb-3">
             <div class="col">
 
               <label>NodeUp</label>
               <textarea name="" id="nodeUp" rows="10" class="col-lg-3">
-                \ Insertion sort
-
-                : cell-  1 cells - ;
+\ Insertion sort
+: cell-  1 cells - ;
 
                 </textarea>
             </div>
@@ -72,9 +114,11 @@
           <label>NodeDown</label>
           <textarea name="" id="nodeDown" rows="10" class="col-lg-3"></textarea>
         </div>
-      </form>
-    </div>
-      <button type="button" class="btn btn-info">Go</button>
+      </div>
+
+
+
+
 
 
     <script>
