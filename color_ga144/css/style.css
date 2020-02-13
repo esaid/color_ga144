@@ -1,0 +1,26 @@
+.CodeMirror {
+      font-family: 'Droid Sans Mono', monospace;
+      font-size: 14px;
+      height: auto;
+      width: auto;
+    }
+p
+{
+  color : #085099;
+}
+body
+{
+  background-color:  #c6c6c5  ;
+}
+
+.jumbotron {
+  background-color:  #fcb103  ;
+
+}
+.bg-img {
+
+  /* Control the height of the image */
+  max-width: 100%;
+  height: auto;
+  
+}
